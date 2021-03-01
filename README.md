@@ -1,6 +1,6 @@
 # Frontend Mentor template
 
-This template's objective is to provide a quick and easy starting point for all my frontend mentor challenges. Avoid decision paralysis, busy work, and get down to what really matters: Getting obliterated by those challenges. It's effective.
+This template's objective is to provide a quick and easy starting point for all my frontend mentor challenges. Avoid decision paralysis, busy work, and get down to what really matters: Getting obliterated by those challenges. Sounds good to me.
 
 ## Usage
 
@@ -10,11 +10,11 @@ npx degit clone armchair-traveller/fm-template
 
 ## Overview
 
-Config and tech stack is subject to change, branches are used as backups of old versions; any adjustments will create a new branch when starting a new challenge.
+Config and tech stack is subject to change, any adjustments will create a new version right before starting a new challenge.
 
-Semantic version description per branch by `num`-`tech` e.g. 1-svelte-packify, 2-react-nextcel
+Releases are tagged by semantic version description e.g. `num`-`tech` 1-svelte-packify, 2-react-nextcel
 
-README tracks current tech details that're not mentioned as a package.
+README tracks current tech details that're not mentioned as a package, as well as additional required config (like global names, styles, and variables, unless it has a TODO to mark it).
 
 ## Tech
 
