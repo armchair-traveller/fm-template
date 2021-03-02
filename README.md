@@ -18,4 +18,5 @@ README tracks current tech details that're not mentioned as a package, as well a
 
 ## Tech
 
-- Using snowpack without a router. Creating additional pages will require copy+pasting quite a bit... Luckily, most challenges do not require additional pages.
+- Note: Using snowpack without a router. Creating additional pages will require copy+pasting quite a bit... Luckily, most challenges do not require additional pages.
+- No app framework used. Plans to switch to Svelte Kit on release.
