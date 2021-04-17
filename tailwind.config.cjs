@@ -13,10 +13,6 @@ module.exports = {
         },
       },
     },
-    fontFamily: {
-      // TODO: Your fonts here
-      main: ["system-ui"],
-    },
   },
   plugins: [],
 };

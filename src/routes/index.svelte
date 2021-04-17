@@ -11,3 +11,14 @@
 </main>
 
 <Attribution />
+
+<style>
+  :global(body) {
+    /* @apply bg-main-400 min-h-full; */
+  }
+
+  main {
+    /* font-size: 14px; */
+    /* @apply text-main-100; */
+  }
+</style>
