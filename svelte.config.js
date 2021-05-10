@@ -1,9 +1,8 @@
-const sveltePreprocess = require("svelte-preprocess");
-const static = require("@sveltejs/adapter-static");
-const pkg = require("./package.json");
+import sveltePreprocess from "svelte-preprocess";
+import static from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
-module.exports = {
+const config = {
   preprocess: [
     sveltePreprocess({
       defaults: {
@@ -20,11 +19,7 @@ module.exports = {
 
     // hydrate the <div id="svelte"> element in src/app.html
     target: "#svelte",
-
-    vite: {
-      ssr: {
-        noExternal: Object.keys(pkg.dependencies || {}),
-      },
-    },
   },
 };
+
+export default config;
