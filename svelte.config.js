@@ -1,5 +1,5 @@
 import sveltePreprocess from "svelte-preprocess";
-import static from "@sveltejs/adapter-static";
+import stic from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,12 +12,10 @@ const config = {
     }),
   ],
   kit: {
-    // By default, `npm run build` will create a standard static app.
-    // You can create optimized builds for different platforms by
-    // specifying a different adapter
-    adapter: static(),
+    // `npm run build` will create a standard static app.
+    adapter: stic(),
 
-    // hydrate the <div id="svelte"> element in src/app.html
+    // hydrate <div id="svelte"> el src/app.html
     target: "#svelte",
   },
 };
