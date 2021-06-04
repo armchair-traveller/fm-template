@@ -1,8 +1,9 @@
-import sveltePreprocess from "svelte-preprocess";
-import stic from "@sveltejs/adapter-static";
+const sveltePreprocess = require("svelte-preprocess");
+const static = require("@sveltejs/adapter-static");
+const pkg = require("./package.json");
 
 /** @type {import('@sveltejs/kit').Config} */
-const config = {
+module.exports = {
   preprocess: [
     sveltePreprocess({
       defaults: {
@@ -12,12 +13,18 @@ const config = {
     }),
   ],
   kit: {
-    // `npm run build` will create a standard static app.
-    adapter: stic(),
+    // By default, `npm run build` will create a standard static app.
+    // You can create optimized builds for different platforms by
+    // specifying a different adapter
+    adapter: static(),
 
-    // hydrate <div id="svelte"> el src/app.html
+    // hydrate the <div id="svelte"> element in src/app.html
     target: "#svelte",
+
+    vite: {
+      ssr: {
+        noExternal: Object.keys(pkg.dependencies || {}),
+      },
+    },
   },
 };
-
-export default config;
